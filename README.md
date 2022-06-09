@@ -22,7 +22,7 @@ cd mapgen && nim c -d:release mapgenerator.nim
 Fantasy Map Generator v0.0.1
 Generate imaginary maps with Simplex Noise
 
-Usage: Map Generator [-h] [-v] [-b=temperate] [-i=16] [-l=0.008] [-o=output] [-s=2048] [-p] [-m]
+Usage: mapgenerator [-h] [-v] [-b=temperate] [-i=16] [-l=0.008] [-o=output] [-s=2048] [-p] [-m]
 
 Required arguments:
 
