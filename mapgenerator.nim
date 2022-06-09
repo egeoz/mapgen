@@ -1,6 +1,6 @@
 import clapfn, tables, perlin, random, math, nimPNG, strutils, times, std/os
 
-var parser = ArgumentParser(programName: "Map Generator", fullName: "Fantasy Map Generator",
+var parser = ArgumentParser(programName: "mapgenerator", fullName: "Fantasy Map Generator",
                             description: "Generate imaginary maps with Simplex Noise", version: "0.0.1",
                             author: "")
 
