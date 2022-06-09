@@ -21,7 +21,6 @@ let scale = parseFloat(args["landmassscale"])
 let iterationCount = parseInt(args["iteration"])
 var fileName = changeFileExt(args["output"], "")
 
-# todo add deep elevations
 type
     Biome = object
         bottomElevationsRed:    uint8
