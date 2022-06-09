@@ -41,19 +41,19 @@ Optional arguments:
 
 ### Examples
 #### Simplex
--Temperate
+- Temperate
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/temperate_simplex.png?raw=true" width="300">
--Arctic
+- Arctic
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/arctic_simplex.png?raw=true" width="300">
--Desert
+- Desert
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/desert_simplex.png?raw=true" width="300">
 
 #### Perlin
--Temperate
+- Temperate
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/temperate_perlin.png?raw=true" width="300">
--Arctic
+- Arctic
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/arctic_perlin.png?raw=true" width="300">
--Desert
+- Desert
 <img src="https://github.com/egeoz/mapgen/blob/main/examples/desert_perlin.png?raw=true" width="300">
 
 
