@@ -42,19 +42,19 @@ Optional arguments:
 ### Examples
 #### Simplex
 - Temperate
-<img src="https://github.com/favicon.ico" width="256">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/temperate_simplex.png?raw=true" width="300">
 - Arctic
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/arctic_simplex.png?raw=true" width="300">
 - Desert
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/desert_simplex.png?raw=true" width="300">
 
 #### Perlin
 - Temperate
-<img src="https://github.com/favicon.ico" width="256">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/temperate_perlin.png?raw=true" width="300">
 - Arctic
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/arctic_perlin.png?raw=true" width="300">
 - Desert
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://github.com/egeoz/mapgen/blob/main/examples/desert_perlin.png?raw=true" width="300">
 
 
 ### TODO
