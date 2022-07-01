@@ -51,7 +51,7 @@ mapgen.saveMap()
 var imgData = mapgen.getMap()
 
 # proc getMapRGBA*(mapgen: MapGenerator): seq[uint8] =
-var imgData = mapgen.getMapRGBA() # Each pixel is [R, G, B, A]
+imgData = mapgen.getMapRGBA() # Each pixel is [R, G, B, A]
 
 ```
 ### Example Program
