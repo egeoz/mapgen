@@ -1,44 +1,71 @@
 # mapgen
-Basic map generation with Simplex and Perlin Noise in Nim
+Basic map generation with Simplex and Perlin Noise in Nim.
 
 ### Requirements
 - nim
-- clapfn
 - nimPNG
 - perlin
+#### For the example program:
+- cligen
 
 
 ### How to Build
 ```bash
 git clone https://github.com/egeoz/mapgen.git
-nimble install clapfn nimPNG perlin
+nimble install cligen nimPNG perlin
 cd mapgen && nim c -d:release mapgenerator.nim
 
 ```
 
 ### Usage
+```nim
+import libmapgen
+
+# MapGenerator* = object
+#    width*, height*, iterationCount*: int
+#    noiseSeed*: float
+#    biome*: Biome
+#    noise: NoiseType
+#    output*: string
+#    bottomElevation*, lowElevation*, midElevation*, highElevation*, topElevation*: uint8
+
+# proc newMapGenerator*(width: int = 1920, height: int = 1080, output: string,
+#                       biome: Biome = Temperate, noise: NoiseType = NoiseType.Simplex,
+#                       noiseSeed: float = -0.2, iterationCount: int = 16, bottomElevation: uint8 = 185,
+#                       lowElevation: uint8 = 170, midElevation: uint8 = 160, highElevation: uint8 = 145,
+#                       topElevation: uint8 = 0): MapGenerator =
+let mapgen = newMapGenerator(width = 1920,
+                            height = 1080,
+                            biome = Temperate,
+                            noise = NoiseType.Simplex,
+                            noiseSeed = -0.1,
+                            output = "image.png")
+
+# proc generateMap*(mapgen: MapGenerator) =
+mapgen.generateMap()
+
+# proc saveMap*(mapgen: MapGenerator) =
+mapgen.saveMap()
+
+# proc getMap*(mapgen: MapGenerator): seq[Pixel] =
+var imgData = mapgen.getMap()
+
+# proc getMapRGBA*(mapgen: MapGenerator): seq[uint8] =
+var imgData = mapgen.getMapRGBA() # Each pixel is [R, G, B, A]
 
 ```
-Fantasy Map Generator v0.0.1
-Generate imaginary maps with Simplex Noise
-
-Usage: mapgenerator [-h] [-v] [-b=temperate] [-i=16] [-l=0.008] [-o=output] [-s=2048] [-p] [-m]
-
-Required arguments:
-
-
-Optional arguments:
-    -h, --help                       Show this help message and exit.
-    -v, --version                    Show version number and exit.
-    -b=temperate, --biome=temperate  Set the color scheme of the map (arctic, desert, mars, temperate).
-    -i=16, --iteration=16            Specify the number of Simplex iterations (increases sharpness).
-    -l=0.008, --landmassscale=0.008  Specify the scale of landmasses (default is 0.008).
-    -o=output, --output=output       Specify the output file name.
-    -s=2048, --size=2048             Specify the size of the map in pixels.
-    -p, --perlin                     Generate with Perlin noise algorithm instead.
-    -m, --heightmap                  Create a heightmap.
+### Example Program
 ```
-
+Usage:
+  mapgenerator [optional-params] [output: string...]
+Options:
+  -h, --help                  Display this help page.
+  -v, --version  false        Show version info.
+  -w=, --width=  1920         Width of the map to be generated.
+  --height=      1080         Height of the map to be generated.
+  -b=, --biome=  "temperate"  Biome type (arctic, temperate, desert).
+  -p, --perlin   false        Use perlin instead of Simplex noise.
+```
 ### Examples
 #### Simplex
 - Temperate
