@@ -87,4 +87,4 @@ Options:
 ### TODO
 - More biomes (ie. color schemes).
 - Gradient color change for altitude.
-- ...
+- Threads
