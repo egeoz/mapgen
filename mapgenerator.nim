@@ -26,5 +26,5 @@ proc runMapGenerator(output: seq[string], width: int = 1920, height: int = 1080,
     mg.saveMap()
 
 when isMainModule:
-    dispatch(runMapGenerator, cmdName = programName, help = {"help": "Display this help page.", "version": "Show version info.", "width": "Width of the map to be generated.", "height": "Height of the map to be generated.", "perlin": "Use perlin instead of Simplex noise.", "biome": "Biome type (arctic, temperate, desert)."},
+    dispatch(runMapGenerator, cmdName = programName, help = {"help": "Display this help page.", "version": "Show version info.", "width": "Width of the map to be generated.", "height": "Height of the map to be generated.", "perlin": "Use Perlin instead of Simplex noise.", "biome": "Biome type (arctic, temperate, desert)."},
             short = {"version": 'v', "biome": 'b', "perlin": 'p'})

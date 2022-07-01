@@ -64,7 +64,7 @@ Options:
   -w=, --width=  1920         Width of the map to be generated.
   --height=      1080         Height of the map to be generated.
   -b=, --biome=  "temperate"  Biome type (arctic, temperate, desert).
-  -p, --perlin   false        Use perlin instead of Simplex noise.
+  -p, --perlin   false        Use Perlin instead of Simplex noise.
 ```
 ### Examples
 #### Simplex
