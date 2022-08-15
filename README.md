@@ -19,17 +19,16 @@ cd mapgen && nim c -d:release mapgenerator.nim
 
 ### Usage
 ```nim
-import libmapgen
+import mapgen
 
 # MapGenerator* = object
 #    width*, height*, iterationCount*: int
 #    noiseSeed*: float
 #    biome*: Biome
 #    noise: NoiseType
-#    output*: string
 #    bottomElevation*, lowElevation*, midElevation*, highElevation*, topElevation*: uint8
 
-# proc newMapGenerator*(width: int = 1920, height: int = 1080, output: string,
+# proc newMapGenerator*(width: int = 1920, height: int = 1080,
 #                       biome: Biome = Temperate, noise: NoiseType = NoiseType.Simplex,
 #                       noiseSeed: float = -0.2, iterationCount: int = 16, bottomElevation: uint8 = 185,
 #                       lowElevation: uint8 = 170, midElevation: uint8 = 160, highElevation: uint8 = 145,
@@ -38,20 +37,20 @@ let mapgen = newMapGenerator(width = 1920,
                             height = 1080,
                             biome = Temperate,
                             noise = NoiseType.Simplex,
-                            noiseSeed = -0.1,
-                            output = "image.png")
+                            noiseSeed = -0.1)
 
 # proc generateMap*(mapgen: MapGenerator) =
 mapgen.generateMap()
 
-# proc saveMap*(mapgen: MapGenerator) =
-mapgen.saveMap()
-
 # proc getMap*(mapgen: MapGenerator): seq[Pixel] =
 var imgData = mapgen.getMap()
 
-# proc getMapRGBA*(mapgen: MapGenerator): seq[uint8] =
-imgData = mapgen.getMapRGBA() # Each pixel is [R, G, B, A]
+# proc getMapRGB*(mapgen: MapGenerator): seq[uint8] =
+imgData = mapgen.getMapRGB() # Each pixel is [R, G, B]
+
+# Saving the map as PNG
+import nimPNG
+discard savePNG24("output.png", mapgen.getMapRGB(), mapgen.width, mapgen.height)
 
 ```
 ### Example Program
