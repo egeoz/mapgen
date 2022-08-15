@@ -49,7 +49,7 @@ imgData = mapgen.getMapRGB() # Each pixel is [R, G, B]
 
 # Saving the map as PNG
 import nimPNG
-discard savePNG24("output.png", mapgen.getMapRGB(), mapgen.width, mapgen.height)
+discard savePNG24("output.png", imgData, mapgen.width, mapgen.height)
 
 ```
 ### Example Program
