@@ -3,11 +3,10 @@ Basic map generation with Simplex and Perlin Noise in Nim.
 
 ### Requirements
 - nim
-- nimPNG
 - perlin
 #### For the example program:
 - cligen
-
+- nimPNG
 
 ### How to Build
 ```bash
